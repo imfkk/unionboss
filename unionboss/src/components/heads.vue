@@ -6,10 +6,10 @@
     <el-row>
       <el-col  :span="3"><div class="tital"></div></el-col>
       <el-col :span="21" >
-        <el-menu   class="el-menu-demo" mode="horizontal" >
-          <el-menu-item index="1">处理中心</el-menu-item>
-          <el-menu-item index="3" >消息中心</el-menu-item>
-          <el-menu-item index="4">订单管理</el-menu-item>
+        <el-menu   class="el-menu-demo" mode="horizontal" @select="handleSelect">
+          <el-menu-item index="1">用户中心</el-menu-item>
+          <el-menu-item index="3" >商机中心</el-menu-item>
+          <el-menu-item index="4">工单中心</el-menu-item>
           <el-menu-item index="6">处理中心</el-menu-item>
           <el-menu-item index="7" >消息中心</el-menu-item>
           <el-menu-item index="8">订单管理</el-menu-item>
@@ -21,7 +21,12 @@
 
 <script>
     export default {
-        name: "heads"
+        name: "heads",
+      methods:{
+        handleSelect(key, keyPath){
+          //alert(key)
+        }
+      }
     }
 </script>
 <style scoped>

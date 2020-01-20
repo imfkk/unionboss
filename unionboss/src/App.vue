@@ -8,8 +8,9 @@
         <Aside></Aside>
       </el-col>
       <el-col :span="21">
-        main
-        <el-row class="main"></el-row>
+        <el-row class="main">
+          <router-view></router-view>
+        </el-row>
         <el-row class="footer">
           <Foot></Foot>
         </el-row>
