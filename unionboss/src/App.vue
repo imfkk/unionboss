@@ -1,21 +1,20 @@
 <template>
   <div id="app">
-    <el-container>
-      <el-header style="height: 120px">
-        <heads></heads>
-      </el-header>
-      <el-container>
-        <el-aside width="200px" style="background-color:  #545c64;">
-          <Aside></Aside>
-        </el-aside>
-        <el-container>
-          <el-main>Main</el-main>
-          <el-footer>
-            <Foot></Foot>
-          </el-footer>
-        </el-container>
-      </el-container>
-    </el-container>
+    <el-row :span="24">
+      <heads></heads>
+    </el-row>
+    <el-row >
+      <el-col :span="3"  class="aside">
+        <Aside></Aside>
+      </el-col>
+      <el-col :span="21">
+        main
+        <el-row class="main"></el-row>
+        <el-row class="footer">
+          <Foot></Foot>
+        </el-row>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -37,32 +36,19 @@
     text-align: center;
     color: #2c3e50;
   }
-  .el-main {
-    background-color: white;
-    color: #333;
-    text-align: center;
-    line-height: 750px;
-  }
 
-   body > .el-container {
-    margin-bottom: 40px;
-  }
-
-  .el-container:nth-child(5) .el-aside,
-  .el-container:nth-child(6) .el-aside {
-    line-height: 260px;
-  }
-
-  .el-container:nth-child(7) .el-aside {
-    line-height: 320px;
-  }
 
   body{
     margin: 0px;
   }
 
-  el-aside{
+  .main{
+    height: 750px;
+  }
 
+  .aside{
+    background-color: rgb(84, 92, 100);
+    height: 800px;
   }
 
 </style>

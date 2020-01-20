@@ -4,8 +4,9 @@
       <el-col :span="24"><div class="tital"></div></el-col>
     </el-row>
     <el-row>
-      <el-col :span="24">
-        <el-menu style="margin-left: 200px"  class="el-menu-demo" mode="horizontal" >
+      <el-col  :span="3"><div class="tital"></div></el-col>
+      <el-col :span="21" >
+        <el-menu   class="el-menu-demo" mode="horizontal" >
           <el-menu-item index="1">处理中心</el-menu-item>
           <el-menu-item index="3" >消息中心</el-menu-item>
           <el-menu-item index="4">订单管理</el-menu-item>
@@ -26,5 +27,6 @@
 <style scoped>
 .tital{
   height: 60px;
+  background-color: #0C2640;
 }
 </style>
