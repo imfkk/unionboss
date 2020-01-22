@@ -5,27 +5,29 @@ import App from './App'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import router from './router'
-import api from './api' // 导入api接口
+import api from './api'
+import store from './store'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);
-/* eslint-disable no-new */
 Vue.prototype.$api = api;
 
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  store,
+  components: {App},
   template: '<App/>',
-  mounted () {
-    this.onLoad(1)
+  mounted() {
+    this.getAllMenus()
   },
   methods: {
-    onLoad(id) {
-      this.$api.article.articleDetail(id, {
-        api: 123
-      }).then(res=> {
-        // 执行某些操作
+    getAllMenus() {
+      this.$api.user.getAllMenus()
+        .then(ret => {
+
+        }).catch(error => {
+
       })
     }
   }
