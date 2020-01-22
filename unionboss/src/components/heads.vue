@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-row>
-      <el-col :span="24"><div class="tital"></div></el-col>
+      <el-col :span="24"><div class="tital" v-permission ></div></el-col>
     </el-row>
     <el-row>
       <el-col  :span="3"><div class="tital"></div></el-col>
