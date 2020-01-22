@@ -41,10 +41,26 @@ new Vue({
   el: '#app',
   router,
   store,
-  components: {App},
+  //（1）数据
+  data:{},// data:Vue, 实例的数据对象
+  components: {App},//components：Vue实例配置局部注册组件
+
+  //（2）类方法
+  computed:{},//computed:计算属性
+  watch:{},
+  filters:{},
+  render:{},
+
   template: '<App/>',
+
+  created(){
+
+  },
   mounted() {
     this.getAllMenus()
+  },
+  beforeDestroy(){
+
   },
   methods: {
     getAllMenus() {
