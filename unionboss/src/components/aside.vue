@@ -1,4 +1,4 @@
-<template>
+<template >
   <el-menu
     default-active="2"
     class="el-menu-vertical-demo"
@@ -7,7 +7,8 @@
     @select="handselect"
     background-color="#545c64"
     text-color="#fff"
-    active-text-color="#ffd04b">
+    active-text-color="#ffd04b"
+    >
     <el-submenu index="1">
       <template slot="title">
         <i class="el-icon-location"></i>
@@ -56,7 +57,12 @@
 </script>
 
 <style scoped>
-  .el-menu-vertical-demo:not(.el-menu--collapse) {
-    min-height: 400px;
+  .el-menu{
+    border-right: none;
   }
+
+  .el-submenu .el-menu-item {
+    min-width: 0px;
+  }
+
 </style>

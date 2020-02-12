@@ -12,7 +12,7 @@ Vue.config.productionTip = false
 Vue.use(ElementUI);
 Vue.prototype.$api = api;
 
-Vue.directive('permission',{
+Vue.directive('permission', {
   bind(el, binding, vnode) {
     // 当指令绑定到 HTML 元素上时触发.**只调用一次**
     console.log('bind triggerd')
@@ -42,24 +42,24 @@ new Vue({
   router,
   store,
   //（1）数据
-  data:{},// data:Vue, 实例的数据对象
+  data: {},// data:Vue, 实例的数据对象
   components: {App},//components：Vue实例配置局部注册组件
 
   //（2）类方法
-  computed:{},//computed:计算属性
-  watch:{},
-  filters:{},
-  render:{},
+  computed: {},//computed:计算属性
+  watch: {},
+  filters: {},
+  /*  render:{},*/
 
   template: '<App/>',
 
-  created(){
+  created() {
 
   },
   mounted() {
     this.getAllMenus()
   },
-  beforeDestroy(){
+  beforeDestroy() {
 
   },
   methods: {

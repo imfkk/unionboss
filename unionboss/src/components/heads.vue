@@ -1,12 +1,15 @@
 <template>
   <div>
     <el-row>
-      <el-col :span="24"><div class="tital" v-permission ></div></el-col>
-    </el-row>
-    <el-row>
       <el-col  :span="3"><div class="tital"></div></el-col>
       <el-col :span="21" >
-        <el-menu   class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu   class="el-menu-demo"
+                   mode="horizontal"
+                   @select="handleSelect"
+                   background-color="#545c64"
+                   text-color="#fff"
+                   active-text-color="#ffd04b">
+          <el-menu-item index="0">首页</el-menu-item>
           <el-menu-item index="1">用户中心</el-menu-item>
           <el-menu-item index="3" >商机中心</el-menu-item>
           <el-menu-item index="4">工单中心</el-menu-item>
