@@ -40,6 +40,7 @@ Vue.directive('permission', {
 new Vue({
   el: '#app',
   router,
+  render:h=>h(App),
   store,
   //（1）数据
   data: {},// data:Vue, 实例的数据对象
@@ -66,9 +67,7 @@ new Vue({
     getAllMenus() {
       this.$api.user.getAllMenus()
         .then(ret => {
-          alert("成功")
         }).catch(error => {
-        alert("wqeqwe")
       })
     }
   }
