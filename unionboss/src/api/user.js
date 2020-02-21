@@ -9,7 +9,7 @@ const user = {
 
   //获取用户的权限菜单
   getAllMenus(){
-    return axios.post("/user/getAllMenus")
+    return axios.post("user/permission/getAllMenus")
   }
 
 

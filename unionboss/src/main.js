@@ -66,9 +66,9 @@ new Vue({
     getAllMenus() {
       this.$api.user.getAllMenus()
         .then(ret => {
-          alerr("wqeqwe")
+          alert("成功")
         }).catch(error => {
-          alerr("wqeqwe")
+        alert("wqeqwe")
       })
     }
   }
